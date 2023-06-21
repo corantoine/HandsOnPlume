@@ -44,7 +44,14 @@ function App() {
                                }/>)}
                 </div>
             </main>
-
+            <footer>
+                <div className="love-message">Conçu et construit avec tout l'amour du monde par l'équipe 🦚 avec l'aide
+                    de
+                    nos contributeurs des Coding Days 👨‍💻👨‍💻.
+                </div>
+                <div className="source-message">Cette application est fortement inspirée de <a
+                    href="https://mesfruitsetlegumesdesaison.fr.">https://mesfruitsetlegumesdesaison.fr.</a></div>
+            </footer>
         </>
     )
 }

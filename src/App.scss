@@ -12,7 +12,7 @@ $grid-breakpoints: (
         xxl: 1400px
 );
 
-header, main {
+header, main, footer {
   margin: 1rem 1rem;
 
   @media (min-width: map-get($grid-breakpoints, sm)) {
@@ -26,6 +26,31 @@ header, main {
   }
   @media (min-width: map-get($grid-breakpoints, xl)) {
     margin: 1rem 12rem;
+  }
+}
+
+footer {
+  font-size: small;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }
 
