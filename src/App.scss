@@ -1,0 +1,49 @@
+@import "~plume-react/dist/style/theme-utilities";
+
+$plm-font-directory: "~plume-react/dist/style/fonts";
+@import "~plume-react/dist/style/theme-maif-dsi";
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+header, main {
+  margin: 1rem 1rem;
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    margin: 1rem 2rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    margin: 1rem 4rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    margin: 1rem 8rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    margin: 1rem 12rem;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+
+  .media-card {
+    padding: spc(m);
+    gap: spc(m);
+    max-width: 240px;
+
+    &-media {
+      padding: spc(m);
+      font-size: x-large;
+    }
+  }
+
+}
