@@ -13,7 +13,7 @@ $grid-breakpoints: (
 );
 
 header, main, footer {
-  margin: 1rem 1rem;
+  margin: 1rem auto;
 
   @media (min-width: map-get($grid-breakpoints, sm)) {
     margin: 1rem 2rem;
@@ -26,6 +26,18 @@ header, main, footer {
   }
   @media (min-width: map-get($grid-breakpoints, xl)) {
     margin: 1rem 12rem;
+  }
+}
+
+header {
+  h1 {
+    font-size: x-large;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      font-size: xx-large;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      font-size: xxx-large;
+    }
   }
 }
 
@@ -54,23 +66,25 @@ footer {
   }
 }
 
+a {
+  color: clr(primary);
+  @include active()
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  justify-content: space-between;
+  justify-content: flex-start;
 
-  .media-card {
-    padding: spc(m);
-    gap: spc(m);
-    max-width: 240px;
+  .products {
+    width: 280px;
 
-    &-media {
-      padding: spc(m);
+    .plm-media-card-media {
       font-size: x-large;
     }
 
-    &-description {
+    .plm-media-card-description {
       display: flex;
       flex-direction: column;
       gap: spc(m);
@@ -80,12 +94,28 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
         gap: spc(xs);
+        width: 230px;
+        margin: 0 auto;
       }
 
       .product-some-numbers {
         display: flex;
         justify-content: space-between;
-        gap: 1rem
+        align-items: center;
+        gap: 1rem;
+
+        &--local, &--co2 {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: spc(m);
+        }
+
+        &--local .local-interrogation-handler, &--co2 .co2-interrogation-handler{
+          border-radius: 1000px;
+          min-width: unset;
+          height: calc(#{$fontSizeUnit} / 2 + #{spc(m)} * 2);
+        }
       }
     }
   }
