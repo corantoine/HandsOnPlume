@@ -47,8 +47,8 @@ function App() {
         </header>
         <main>
             <div className="products">{products.map((product, i) =>
-                <MediaCard key={`products-${i}`}
-                           className="products"
+                <MediaCard key={`product-${i}`}
+                           className="product"
                            media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}>
                     <div className="product-availability-months">{narrowMonthStrings.map((month, j) => <TooltifiedBadge
                         key={`product-${i}-availability-months-${j}`}
@@ -64,7 +64,7 @@ function App() {
                                     onClick={() => setLocalInterrogation(true)}>?</Button>
                         </div>
                         <div className="product-some-numbers--co2">
-                            <b>{product.CO2 ?? "?"}</b> kgCO2e/kg
+                            <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
                             <Button className="co2-interrogation-handler"
                                     onClick={() => setCO2Interrogation(true)}>?</Button>
                         </div>
