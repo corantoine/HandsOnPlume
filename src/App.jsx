@@ -22,8 +22,8 @@ function App() {
             </header>
             <main>
                 <div className="products">{products.map((product, i) =>
-                    <MediaCard key={`products-${i}`}
-                               className="products"
+                    <MediaCard key={`product-${i}`}
+                               className="product"
                                media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}>
                         <div className="product-availability-months">{months('narrow').map((month, j) =>
                             <Badge key={`product-${i}-availability-months-${j}`}
@@ -36,7 +36,7 @@ function App() {
                                 {product.local ? '🇫🇷 Local' : '✈️ Non local'}
                             </div>
                             <div className="product-some-numbers--local">
-                                <b>{product.CO2 ?? "?"}</b> kgCO2e/kg
+                                <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
                             </div>
                         </div>
                     </MediaCard>)}
