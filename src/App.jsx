@@ -69,7 +69,7 @@ const ProductCards = ({className, products}) => {
                             onClick={() => setLocalInterrogation(true)}>?</Button>
                 </div>
                 <div className="product-some-numbers--co2">
-                    <b>{product.CO2 ?? "?"}</b> kgCO2e/kg
+                    <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
                     <Button className="co2-interrogation-handler"
                             onClick={() => setCO2Interrogation(true)}>?</Button>
                 </div>

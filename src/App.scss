@@ -111,6 +111,10 @@ a {
         align-items: center;
         gap: 1rem;
 
+        &--highlighting {
+          font-weight: bold;
+        }
+
         &--local, &--co2 {
           display: flex;
           flex-wrap: wrap;
