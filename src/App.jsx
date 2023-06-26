@@ -24,24 +24,22 @@ function App() {
                 <div className="products">{products.map((product, i) =>
                     <MediaCard key={`products-${i}`}
                                className="products"
-                               media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}
-                               description={<>
-                                   <div className="product-availability-months">{months('narrow').map((month, j) =>
-                                       <Badge key={`product-${i}-availability-months-${j}`}
-                                              status={product.months.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}>
-                                           {month}
-                                       </Badge>)}
-                                   </div>
-                                   <div className="product-some-numbers">
-                                       <div className="product-some-numbers--local">
-                                           {product.local ? '🇫🇷 Local' : '✈️ Non local'}
-                                       </div>
-                                       <div className="product-some-numbers--local">
-                                           <b>{product.CO2 ?? "?"}</b> kgCO2e/kg
-                                       </div>
-                                   </div>
-                               </>
-                               }/>)}
+                               media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}>
+                        <div className="product-availability-months">{months('narrow').map((month, j) =>
+                            <Badge key={`product-${i}-availability-months-${j}`}
+                                   status={product.months.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}>
+                                {month}
+                            </Badge>)}
+                        </div>
+                        <div className="product-some-numbers">
+                            <div className="product-some-numbers--local">
+                                {product.local ? '🇫🇷 Local' : '✈️ Non local'}
+                            </div>
+                            <div className="product-some-numbers--local">
+                                <b>{product.CO2 ?? "?"}</b> kgCO2e/kg
+                            </div>
+                        </div>
+                    </MediaCard>)}
                 </div>
             </main>
             <footer>
