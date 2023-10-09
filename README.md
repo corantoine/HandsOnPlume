@@ -14,7 +14,7 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
 
 ￼![Step 0, capture d'écran d'un projet vite initial](README.assets/step0-init-vite-project.png)
 
-- [] Créer un projet avec vite.js 
+- [ ] Créer un projet avec vite.js 
     - https://vitejs.dev
     - https://vitejs.dev/guide/#scaffolding-your-first-vite-project
 - [ ] Initialiser le système de versioning Git pour pouvoir travailler sur plusieurs branches
