@@ -8,6 +8,10 @@ git clone git@github.maif.io:commons/plume-react-vegetables-seasons.git
 
 L'étape 0 initalise un projet ViteJS. Cette étape est de la configuration d'outils. Elle n'est pas obligatoire pour la suite des travaux.
 
+Un temps d'échange de ⏱️ ~15/20min est prévu entre chaque étape pour présenter une solution et l'étape suivante.
+
+
+
 
 
 
@@ -17,7 +21,7 @@ L'étape 0 initalise un projet ViteJS. Cette étape est de la configuration d'ou
 
 L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à outils ViteJS.
 
-￼![Step 0, capture d'écran d'un projet vite initial](README.assets/step0-init-vite-project.png)
+￼![Capture d'écran de l'état final de l'étape 0](README.assets/step0-init-vite-project.png)
 
 - [ ] Créez un projet avec vite.js.
     - https://vitejs.dev
@@ -39,11 +43,13 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
 
 
 
-## Étape 1, <small>⏱️ _~30/40 min_</small>
+
+
+## Étape 1, <small>⏱️ _~35/40 min_</small>
 
 L’objectif du Step 1 est d’initier une page d’accueil simple. Les composants Plume `Mediacard` et le _display_ `flex` seront de la partie.
 
-![Alt text](README.assets/step1-final-result.png)
+![Capture d'écran de l'état final de l'étape 1](README.assets/step1-final-result.png)
 ￼
 >ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step 0` :
 >```terminal
@@ -103,7 +109,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 >})
 >````
 
-- [ ] Importer les fonts Plume
+- [ ] Importez les fonts Plume
 
 >🚨 à compléter 
 
@@ -132,4 +138,32 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 
 
+
+
+
+## Étape 2, <small>⏱️ _~35/40 min_</small>
+
+
+L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard` : Javascript comme un expert, API Date et composant `Badge`.
+
+￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final result.png>)
+
+- [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
+- [ ] Affichez les mois ou le produit est disponible, utilisez le composant `Badge`` : https://pages.github.maif.io/commons/plume-react/#/Badge/Badge
+- [ ] Le produit est-il local ?
+- [ ] Mise en avant kgCO2e/kg
+- [ ] N’oubliez pas d’utiliser les variables et Mixin SCSS de Plume ;)
+- [ ] Flex Flex Flex… wrap & space-between
+- [ ] Pensez à utiliser le Nullish coalescing operator (??) lorsque l’infomation n’est pas présente dans votre DataSource https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+
+
+### Pour aller plus loin…
+
+Le but est de générer le tableau de façon automatique et de profiter de l'internationnalisation de la fonction `toLocaleTimeString()` de l'API Date intégré directement au langage Javascript.
+
+- [ ] Générez le tableau à l’aide de l’API Date de javascript :p
+    - https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp
+    - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date
+    - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options (month style :p)
 
