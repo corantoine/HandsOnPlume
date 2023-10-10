@@ -146,7 +146,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard` : Javascript comme un expert, API Date et composant `Badge`.
 
-￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final result.png>)
+￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
 
 - [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
 - [ ] Affichez les mois ou le produit est disponible, utilisez le composant `Badge`` : https://pages.github.maif.io/commons/plume-react/#/Badge/Badge
@@ -167,3 +167,26 @@ Le but est de générer le tableau de façon automatique et de profiter de l'int
     - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options (month style :p)
 
+
+
+
+
+
+
+
+
+
+
+## Étape 5, <small>⏱️ _~?min_</small>
+
+L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`
+
+￼![Capture d'écran de l'état final de l'étape 5](<README.assets/step5-final-result.png>)
+
+
+>ℹ️ Le fait d'utiliser un hook de validation à plusieurs avantages : 
+>
+>- Simplifier la mise en place de validation sur un state complexe
+>- Découpler la validation métier de la partie comportement/scripting HTML
+>- Déclencher la validation à n'importe quel endroit dans la vie du composant
+> 
