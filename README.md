@@ -190,3 +190,85 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 >- Découpler la validation métier de la partie comportement/scripting HTML
 >- Déclencher la validation à n'importe quel endroit dans la vie du composant
 > 
+
+
+- [ ] importez le hook `useValidatedState` et remplacez le hook `useState` par celui-ci
+
+>ℹ️ En plus de retourner le `state` et la méthode `setState` classiques, le hook retourne un objet `errors` et une callback de validation `validate`.
+>
+>L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenché.
+>
+>La méthode `validate` prend en paramètre un objet de callback. Cet objet de callback doit être à l'image de l'objet `state`. La méthode `validate` retourne un objet de type : 
+>```javascript
+>{
+>    errors,
+>    isFailure: () => isDefined(errors),
+>    isSuccess: () => nonDefined(errors),
+>    throwErrorIfFail: message => {
+>        if (isDefined(errors)) {
+>            throw new Error(message);
+>        }
+>    }
+>}
+>``````
+
+
+>ℹ️ Par exemple, prenons le `state` suivant : 
+>```javascript
+>{
+>   societaire: {
+>       prenom: undefined
+>       age: 42
+>   }
+>}
+>```
+>
+>le déclenchement de la méthode `validate` suivante : 
+>```javascript
+>validate({
+>   societaire: {
+>       prenom: (it) => {
+>            if ([undefined, null].includes(it.prenom)) return `Le prénom du produit est obligatoire.`;
+>        }
+>   }
+>})
+>```
+>retournera le speudo objet suivant :
+>```javascript
+>{
+>    errors: {
+>        societaire: {
+>            prenom: `Le prénom du produit est obligatoire.`
+>        }
+>    },
+>    isFailure: () => true,
+>    isSuccess: () => false,
+>    throwErrorIfFail: (message) => throw new Error(message)
+>}
+>```
+
+>ℹ️ Pour information, le message levée par la méthode `throwErrorIfFail` est capturée par les composant `Form` de Plume et interprétée comme un message général.
+
+
+- [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaires suivant :
+    - Nom du produit
+    - Mois de production
+    - PEF
+    - CO2
+
+- [ ] Déclenchez une validation à la soumission du formulaire avec les règles suivantes :
+    - Le nom du produit est obligatoire.
+    - Au moins un mois doit être sélectionné.
+    - L'indicateur PEF est obligatoire.
+    - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
+    - L'indicateur CO2 est obligatoire.
+    - L'indicateur CO2 ne peut pas être négatif.
+    - CO2
+
+- [ ] N'oubliez pas de transmettre vos messages d'erreur aux différents fragments du formulaire.
+
+
+### Pour aller plus loin…
+
+- [ ] Tranformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
+
