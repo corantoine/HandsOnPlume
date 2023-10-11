@@ -89,6 +89,11 @@ const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
 ProductForm.propTypes = {
     onCancel: PropTypes.func.isRequired,
     onProductSubmit: PropTypes.func.isRequired,
+    longMonthStrings:PropTypes.array
+}
+
+ProductForm.defaultProps = {
+    longMonthStrings:[]
 }
 
 export default ProductForm
