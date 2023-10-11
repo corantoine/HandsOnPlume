@@ -12,17 +12,6 @@ import {
 	TooltipVariant,
 } from "plume-react"
 
-const birthday = new Date(0)
-// ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
-const months = (style = "long") =>
-	[...Array(12).keys()].map((i) => {
-		const date = new Date(birthday)
-		date.setMonth(i)
-		return date.toLocaleDateString("fr-FR", { month: style })
-	})
-const narrowMonthStrings = months("narrow")
-const longMonthStrings = months("long")
-
 const TooltifiedBadge = ({ id, label, status, tooltipContent }) => {
 	const badgeRef = useRef(undefined)
 	return (
@@ -46,7 +35,7 @@ TooltifiedBadge.propTypes = {
 	tooltipContent: PropTypes.string.isRequired,
 }
 
-const ProductCards = ({ products }) => {
+const ProductCards = ({ products, narrowMonthStrings, longMonthStrings }) => {
 	const [localInterrogation, setLocalInterrogation] = useState(false)
 	const [co2Interrogation, setCO2Interrogation] = useState(false)
 
@@ -168,9 +157,12 @@ ProductCards.propTypes = {
 			CO2: PropTypes.number,
 		})
 	).isRequired,
+	narrowMonthStrings: PropTypes.array,
+	longMonthStrings: PropTypes.array,
 }
 ProductCards.defaultProps = {
-	className: undefined,
+	narrowMonthStrings: [],
+	longMonthStrings: [],
 }
 
 export default ProductCards

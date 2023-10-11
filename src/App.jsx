@@ -6,6 +6,17 @@ import "./App.scss"
 
 import initialProducts from "./assets/products.json"
 
+const birthday = new Date(0)
+// ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+const months = (style = "long") =>
+	[...Array(12).keys()].map((i) => {
+		const date = new Date(birthday)
+		date.setMonth(i)
+		return date.toLocaleDateString("fr-FR", { month: style })
+	})
+const narrowMonthStrings = months("narrow")
+const longMonthStrings = months("long")
+
 function App() {
 	const products = initialProducts
 
@@ -24,7 +35,11 @@ function App() {
 					</>
 				) : (
 					<>
-						<ProductCards products={products} />
+						<ProductCards
+							products={products}
+							narrowMonthStrings={narrowMonthStrings}
+							longMonthStrings={longMonthStrings}
+						/>
 						<div className='products-actions'>
 							<Button
 								className='product-add-handler'
