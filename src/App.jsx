@@ -31,11 +31,10 @@ function App() {
         <main>{addMode ? <>
             <h2>Ajouter un Produit</h2>
             <ProductForm longMonthStrings={longMonthStrings}
-                         onCancel={() => setAddMode(false)}
-                         onProductSubmit={product => {
-                             setProducts([...products, product])
-                             setAddMode(false)
-                         }}/></> : <>
+                         setAddMode={setAddMode}
+                         products={products}
+                         setProducts={setProducts}
+            /></> : <>
             <ProductCards className="products" products={products} narrowMonthStrings={narrowMonthStrings} longMonthStrings={longMonthStrings}/>
             <div className="products-actions">
                 <Button className="product-add-handler" primary onClick={() => setAddMode(true)}>

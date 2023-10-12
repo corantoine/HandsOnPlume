@@ -1,8 +1,8 @@
-import { useState} from "react";
+import {useState} from "react";
 import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment} from "plume-react";
 import PropTypes from "prop-types";
 
-const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
+const ProductForm = ({setAddMode, products, setProducts, longMonthStrings}) => {
     const [product, setProduct] = useState({
         label: {
             fr: undefined
@@ -16,18 +16,20 @@ const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
 
     return <Form id="product-form-0"
                  className="product-form"
-                 onCancel={onCancel}
-                 onSubmit={() => onProductSubmit(product)}>
+                 onSubmit={() => {
+                     setProducts([...products, product])
+                     setAddMode(false)
+                 }}>
         <StringFormFragment
             id="label"
             label="Nom du produit"
-            value={product.label?.fr}
+            value={product?.label?.fr}
             onValueChange={label => setProduct({...product, label: {fr: label}})}
         />
         <StringFormFragment
             id="emoji"
             label="Emoji"
-            value={product.emoji}
+            value={product?.emoji}
             hint={<span>Pour plus de <b>fun</b>, ajouter un emoji 🍋🍇🌶️🧅!</span>}
             onValueChange={emoji => setProduct({...product, emoji})}
         />
@@ -56,7 +58,7 @@ const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
                     }
                 })(i)
             }))}
-            value={product.months}
+            value={product?.months}
             onValueChange={months => setProduct({...product, months})}
             renderOption={({label, icon}) => `${icon} ${label}`}
             multiple
@@ -65,7 +67,7 @@ const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
             id="local"
             label="Est-ce un produit local ?"
             options={[{value: 'true', label: '🇫🇷 Local'}, {value: 'false', label: '✈️ Non local'}]}
-            value={product.local ? 'true' : 'false'}
+            value={product?.local ? 'true' : 'false'}
             onValueChange={local => setProduct({...product, local: local === 'true'})}
             inlined
         />
@@ -74,26 +76,39 @@ const ProductForm = ({onCancel, onProductSubmit, longMonthStrings}) => {
                 id="pef"
                 label="PEF"
                 formatDescription="0,11"
-                value={product.pef}
+                value={product?.pef}
                 onValueChange={pef => setProduct({...product, pef})}/>
             <NumberFormFragment
                 id="CO2"
                 label="CO2"
                 formatDescription="1,76 kgCO2e/kg"
                 unit="kgCO2e/kg"
-                value={product.CO2}
+                value={product?.CO2}
                 onValueChange={CO2 => setProduct({...product, CO2})}/>
         </div>
     </Form>
 }
 ProductForm.propTypes = {
-    onCancel: PropTypes.func.isRequired,
-    onProductSubmit: PropTypes.func.isRequired,
-    longMonthStrings:PropTypes.array
+    setAddMode: PropTypes.func,
+    products: PropTypes.shape({
+        label: PropTypes.shape({
+            fr: PropTypes.string.isRequired
+        }),
+        months: PropTypes.arrayOf(PropTypes.number).isRequired,
+        emoji: PropTypes.string.isRequired,
+        local: PropTypes.bool,
+        pef: PropTypes.number,
+        CO2: PropTypes.number,
+    }),
+    setProducts: PropTypes.func,
+    longMonthStrings: PropTypes.array
 }
 
 ProductForm.defaultProps = {
-    longMonthStrings:[]
+    setAddMode: () => undefined,
+    products: undefined,
+    setProducts: () => undefined,
+    longMonthStrings: []
 }
 
 export default ProductForm
