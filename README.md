@@ -150,6 +150,8 @@ Le but est de générer le tableau de façon automatique et de profiter de l'int
 
 L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `AnchorDialog`.
 
+Repartez de la branche "step-2".
+
 **Le composant Tooltip :** https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
 Objectif : Ajouter un Tooltip dans le but d'afficher le mois complet.
