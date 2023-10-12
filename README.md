@@ -191,3 +191,33 @@ Ajouter un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `A
       transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank"                      rel="noreferrer">mon impact transport</a>.
 
 - [ ] La croix sur l'entête de l'`AnchorDialog` doit permettre la fermeture de celle-ci.
+
+
+## Étape 4, <small>⏱️ _~35/40 min_</small>
+
+L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
+Repartez de la branche "step-3".
+Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
+Ce bouton permettra de switcher entre le tableau de produit et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
+
+￼![Capture d'écran de l'état final de l'étape 4](<README.assets/step4-final-result.png>)
+
+- [ ] Créez un composant `ProductForm` qui va contenir le formulaire.
+
+Pour créer le formulaire vous aurez besoin des composants suivants :
+- `StringFormFragment`
+- `ComboboxFormFragment`
+- `RadioGroupFormFragment`
+- `NumberFormFragment`
+
+🎨 Pour la disposition des champs pensez à utiliser les flexbox 😉
+
+- [ ] Ajoutez les deux boutons "Annuler et "Valider" en bas du formulaire.
+    - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produit".
+    - Le bouton "Valider" sera implémenté dans le step suivant.
+
+### Pour aller plus loin…
+
+- [ ] Personnalisez le `ComboboxFormFragment` en ajoutant un emoji devant chaque nom de mois.
+
+
