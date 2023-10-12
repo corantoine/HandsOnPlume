@@ -150,17 +150,13 @@ Le but est de générer le tableau de façon automatique et de profiter de l'int
 
 L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `AnchorDialog`.
 
-### Le composant Tooltip
-
-https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
+**Le composant Tooltip :** https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
 Objectif : Ajouter un Tooltip dans le but d'afficher le mois complet.
 
 ![Capture d'écran Tooltip l'étape 3](README.assets/step3-final-result-tooltip.png)
 
-### Le composant AnchorDialog
-
-https://pages.github.maif.io/commons/plume-react/#/Dialogs/AnchorDialog
+**Le composant AnchorDialog :** https://pages.github.maif.io/commons/plume-react/#/Dialogs/AnchorDialog
 
 Objectif : Associer une AnchorDialog à un composant Button
 
@@ -168,14 +164,14 @@ Objectif : Associer une AnchorDialog à un composant Button
 
 Ajouter un bouton (?) à droite du libellé Local et lui associer une AnchorDialog. Un clic sur ce bouton doit afficher l'AnchorDialog avec les caractéristiques suivantes :
 
-- Titre : "Pourquoi consommer local ?"
-- Contenu : "Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
-  locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
-  l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-  que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
-  de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-  transport terrestre et le bateau."
-- La croix sur l'entête de l'AnchorDialog doit permettre la fermeture de celle-ci.
+- [ ] **Titre :** "Pourquoi consommer local ?"
+- [ ] **Contenu :** "Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
+      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
+      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
+      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
+      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
+      transport terrestre et le bateau."
+- [ ] La croix sur l'entête de l'AnchorDialog doit permettre la fermeture de celle-ci.
 
 ### Pour aller plus loin…
 
@@ -183,13 +179,13 @@ Ajouter un bouton (?) à droite du libellé Local et lui associer une AnchorDial
 
 Ajouter un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
 
-- **Titre** : L'équivalent CO2 (CO2e)
-- **Contenu** :
-  Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
-  locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
-  l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-  que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
-  de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-  transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank"                      rel="noreferrer">mon impact transport</a>.
+- [ ] **Titre** : L'équivalent CO2 (CO2e)
+- [ ] **Contenu** :
+      Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
+      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
+      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
+      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
+      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
+      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank"                      rel="noreferrer">mon impact transport</a>.
 
-- La croix sur l'entête de l'`AnchorDialog` doit permettre la fermeture de celle-ci.
+- [ ] La croix sur l'entête de l'`AnchorDialog` doit permettre la fermeture de celle-ci.
