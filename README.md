@@ -228,7 +228,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 >validate({
 >   societaire: {
 >       prenom: (it) => {
->            if ([undefined, null].includes(it.prenom)) return `Le prénom du produit est obligatoire.`;
+>            if ([undefined, null].includes(it.prenom)) return `Le prénom du sociétaire est obligatoire.`;
 >        }
 >   }
 >})
