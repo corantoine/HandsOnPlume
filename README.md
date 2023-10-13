@@ -263,7 +263,6 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
     - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
     - L'indicateur CO2 est obligatoire.
     - L'indicateur CO2 ne peut pas être négatif.
-    - CO2
 
 - [ ] N'oubliez pas de transmettre vos messages d'erreur aux différents fragments du formulaire.
 
