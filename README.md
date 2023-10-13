@@ -126,7 +126,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard` : Javascript comme un expert, API Date et composant `Badge`.
 
-￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final result.png>)
+￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
 
 - [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
 - [ ] Affichez les mois ou le produit est disponible, utilisez le composant `Badge`` : https://pages.github.maif.io/commons/plume-react/#/Badge/Badge
@@ -220,4 +220,108 @@ Pour créer le formulaire vous aurez besoin des composants suivants :
 
 - [ ] Personnalisez le `ComboboxFormFragment` en ajoutant un emoji devant chaque nom de mois.
 
+
+
+
+
+
+
+
+
+
+
+
+## Étape 5, <small>⏱️ _~?min_</small>
+
+L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`
+
+￼![Capture d'écran de l'état final de l'étape 5](<README.assets/step5-final-result.png>)
+
+
+>ℹ️ Le fait d'utiliser un hook de validation à plusieurs avantages : 
+>
+>- Simplifier la mise en place de validation sur un state complexe
+>- Découpler la validation métier de la partie comportement/scripting HTML
+>- Déclencher la validation à n'importe quel endroit dans la vie du composant
+> 
+
+
+- [ ] importez le hook `useValidatedState` et remplacez le hook `useState` par celui-ci
+
+>ℹ️ En plus de retourner le `state` et la méthode `setState` classiques, le hook retourne un objet `errors` et une callback de validation `validate`.
+>
+>L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenché.
+>
+>La méthode `validate` prend en paramètre un objet de callback. Cet objet de callback doit être à l'image de l'objet `state`. La méthode `validate` retourne un objet de type : 
+>```javascript
+>{
+>    errors,
+>    isFailure: () => isDefined(errors),
+>    isSuccess: () => nonDefined(errors),
+>    throwErrorIfFail: message => {
+>        if (isDefined(errors)) {
+>            throw new Error(message);
+>        }
+>    }
+>}
+>``````
+
+
+>ℹ️ Par exemple, prenons le `state` suivant : 
+>```javascript
+>{
+>   societaire: {
+>       prenom: undefined
+>       age: 42
+>   }
+>}
+>```
+>
+>l'appel de la méthode `validate` serai : 
+>```javascript
+>validate({
+>   societaire: {
+>       prenom: (it) => {
+>            if ([undefined, null].includes(it.prenom)) return `Le prénom du sociétaire est obligatoire.`;
+>        }
+>   }
+>})
+>```
+>retournera le speudo objet suivant :
+>```javascript
+>{
+>    errors: {
+>        societaire: {
+>            prenom: `Le prénom du produit est obligatoire.`
+>        }
+>    },
+>    isFailure: () => true,
+>    isSuccess: () => false,
+>    throwErrorIfFail: (message) => throw new Error(message)
+>}
+>```
+
+>ℹ️ Pour information, le message levée par la méthode `throwErrorIfFail` est capturée par les composant `Form` de Plume et interprétée comme un message général.
+
+
+- [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaires suivant :
+    - Nom du produit
+    - Mois de production
+    - PEF
+    - CO2
+
+- [ ] Déclenchez une validation à la soumission du formulaire avec les règles suivantes :
+    - Le nom du produit est obligatoire.
+    - Au moins un mois doit être sélectionné.
+    - L'indicateur PEF est obligatoire.
+    - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
+    - L'indicateur CO2 est obligatoire.
+    - L'indicateur CO2 ne peut pas être négatif.
+
+- [ ] N'oubliez pas de transmettre vos messages d'erreur aux différents fragments du formulaire.
+
+
+### Pour aller plus loin…
+
+- [ ] Tranformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
 
