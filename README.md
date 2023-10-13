@@ -223,7 +223,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 >}
 >```
 >
->le déclenchement de la méthode `validate` suivante : 
+>l'appel de la méthode `validate` serai : 
 >```javascript
 >validate({
 >   societaire: {
