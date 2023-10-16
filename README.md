@@ -96,15 +96,9 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > })
 > ```
 
-- [ ] Importez les fonts Plume
-
-> 🚨 à compléter
-
 ### Pour aller plus loin…
 
-- [ ] Jouez avec les variables provenant du thème plume, par exemple, à l’aide des mixin `clr(primary)`, `@include active()` ou `spc(m)`
-
-> 🚨 à compléter
+- [ ] Jouez avec les variables provenant du thème plume, par exemple, à l’aide des mixin `clr(primary)` ou `spc(m)`...
 
 - [ ] Rendez votre page d’accueil responsive
   - Créez une map scss
@@ -118,9 +112,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
     	xxl: 1400px
     );
     ```
-  - Jouez avec les _media rules_
-
-> 🚨 à compléter
+  - Jouez avec les _media rules_, par exemple changez les espacements en fonction de la largeur d'écran.
 
 ## Étape 2, <small>⏱️ _~35/40 min_</small>
 
