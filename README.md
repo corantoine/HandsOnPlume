@@ -318,12 +318,17 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 ## Étape 6, <small>⏱️ _~?min_</small>
 
-L'objectif de ce step est d'ajouter le composant `DateFormFragment`.
-
-....
+L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon une date.
 
 Repartez de la branche "step-5".
 
-- [ ] Ajouter le composant `DateFormFragment`
+![Capture d'écran DateFormFragment de l'étape 6](README.assets/step6-final-result.png)
 
-- [ ] Suite à la sélection d'une date, filter les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
+- [ ] Ajoutez le composant `DateFormFragment` tel que présenté ci-dessus.
+
+  - La date par défaut doit être la date du jour
+  - Utilisez `useState` pour stocker la date saisie ou sélectionnée dans ce composant
+
+- [ ] Suite à la sélection d'une date, filtez les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
+
+  - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
