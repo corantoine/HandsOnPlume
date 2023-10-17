@@ -21,7 +21,7 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
   - https://vitejs.dev/guide/#scaffolding-your-first-vite-project
 - [ ] Initialisez le système de versioning Git pour pouvoir travailler sur plusieurs branches.
   - `git init`
-  - `Git checkout -b step 0`
+  - `Git checkout -b step-0`
 - [ ] Lancer l’application par défaut
   - `npm install`
   - `npm run dev`
@@ -38,10 +38,10 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 ![Capture d'écran de l'état final de l'étape 1](README.assets/step1-final-result.png)
 ￼
 
-> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step0` :
+> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step-0` :
 >
 > ```terminal
-> git checkout -b step0 origin/step0
+> git checkout -b step-0 origin/step-0
 > ```
 
 - [ ] Supprimez le code initié par ViteJS.
@@ -120,10 +120,10 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 
 ￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step1` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-1` :
 >
 > ```terminal
-> git checkout -b step1 origin/step1
+> git checkout -b step-1 origin/step-1
 > ```
 
 - [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
@@ -148,10 +148,10 @@ Le but est de générer le tableau de façon automatique et de profiter de l'int
 
 L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `AnchorDialog`.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step2` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-2` :
 >
 > ```terminal
-> git checkout -b step2 origin/step2
+> git checkout -b step-2 origin/step-2
 > ```
 
 
@@ -198,10 +198,10 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 
 L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step3` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-3` :
 >
 > ```terminal
-> git checkout -b step3 origin/step3
+> git checkout -b step-3 origin/step-3
 > ```
 
 Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
@@ -243,10 +243,10 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 
 L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step4` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-4` :
 >
 > ```terminal
-> git checkout -b step4 origin/step4
+> git checkout -b step-4 origin/step-4
 > ```
 
 ￼![Capture d'écran de l'état final de l'étape 5](README.assets/step5-final-result.png)
@@ -345,10 +345,10 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon une date.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step5` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-5` :
 >
 > ```terminal
-> git checkout -b step5 origin/step5
+> git checkout -b step-5 origin/step-5
 > ```
 
 ![Capture d'écran DateFormFragment de l'étape 6](README.assets/step6-final-result.png)
