@@ -243,7 +243,7 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 
 L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step3` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step4` :
 >
 > ```terminal
 > git checkout -b step4 origin/step4
@@ -345,7 +345,11 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon une date.
 
-Repartez de la branche "step-5".
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step5` :
+>
+> ```terminal
+> git checkout -b step5 origin/step5
+> ```
 
 ![Capture d'écran DateFormFragment de l'étape 6](README.assets/step6-final-result.png)
 
