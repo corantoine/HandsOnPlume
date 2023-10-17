@@ -38,7 +38,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 ![Capture d'écran de l'état final de l'étape 1](README.assets/step1-final-result.png)
 ￼
 
-> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step 0` :
+> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step0` :
 >
 > ```terminal
 > git checkout -b step0 origin/step0
@@ -96,15 +96,9 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > })
 > ```
 
-- [ ] Importez les fonts Plume
-
-> 🚨 à compléter
-
 ### Pour aller plus loin…
 
-- [ ] Jouez avec les variables provenant du thème plume, par exemple, à l’aide des mixin `clr(primary)`, `@include active()` ou `spc(m)`
-
-> 🚨 à compléter
+- [ ] Jouez avec les variables provenant du thème plume, par exemple, à l’aide des mixin `clr(primary)` ou `spc(m)`...
 
 - [ ] Rendez votre page d’accueil responsive
   - Créez une map scss
@@ -118,21 +112,25 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
     	xxl: 1400px
     );
     ```
-  - Jouez avec les _media rules_
-
-> 🚨 à compléter
+  - Jouez avec les _media rules_, par exemple changez les espacements en fonction de la largeur d'écran.
 
 ## Étape 2, <small>⏱️ _~35/40 min_</small>
 
 L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard` : Javascript comme un expert, API Date et composant `Badge`.
 
-￼![Capture d'écran de l'état final de l'étape 2](README.assets/step2-final-result.png)
+￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
+
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step1` :
+>
+> ```terminal
+> git checkout -b step1 origin/step1
+> ```
 
 - [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
 - [ ] Affichez les mois ou le produit est disponible, utilisez le composant `Badge`` : https://pages.github.maif.io/commons/plume-react/#/Badge/Badge
 - [ ] Le produit est-il local ?
 - [ ] Mise en avant kgCO2e/kg
-- [ ] N’oubliez pas d’utiliser les variables et Mixin SCSS de Plume ;)
+- [ ] N’oubliez pas d’utiliser les variables et Mixin SCSS de Plume 😝
 - [ ] Flex Flex Flex… wrap & space-between
 - [ ] Pensez à utiliser le Nullish coalescing operator (??) lorsque l’infomation n’est pas présente dans votre DataSource https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 
@@ -150,52 +148,62 @@ Le but est de générer le tableau de façon automatique et de profiter de l'int
 
 L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `AnchorDialog`.
 
-Repartez de la branche "step-2".
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step2` :
+>
+> ```terminal
+> git checkout -b step2 origin/step2
+> ```
 
-**Le composant Tooltip :** https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
-Objectif : Ajouter un Tooltip dans le but d'afficher le mois complet.
+
+- [ ] Ajoutez un `Tooltip` au `Badge` d'intiale du mois afin d'afficher le mois complet.
+
+> 🔗 https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
 ![Capture d'écran Tooltip l'étape 3](README.assets/step3-final-result-tooltip.png)
 
-**Le composant AnchorDialog :** https://pages.github.maif.io/commons/plume-react/#/Dialogs/AnchorDialog
 
-Objectif : Associer une AnchorDialog à un composant Button
+
+- [ ] Ajoutez un bouton (?) à droite du libellé Local et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog`` avec les caractéristiques suivantes :
+
+  - Titre : _Pourquoi consommer local ?_
+  - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
+      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
+      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
+      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
+      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
+      transport terrestre et le bateau._
+
+> 🔗 https://pages.github.maif.io/commons/plume-react/#/Dialogs/AnchorDialog
 
 ![Capture d'écran AnchorDialog l'étape 3](README.assets/step3-final-result-anchordialog.png)
 
-Ajouter un bouton (?) à droite du libellé Local et lui associer une AnchorDialog. Un clic sur ce bouton doit afficher l'AnchorDialog avec les caractéristiques suivantes :
+### Pour aller plus loin…
 
-- [ ] **Titre :** "Pourquoi consommer local ?"
-- [ ] **Contenu :** "Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
+
+- [ ] Ajouter un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
+
+  - Titre : _L'équivalent CO2 (CO2e)_
+  - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
       locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
       l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
       que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
       de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-      transport terrestre et le bateau."
-- [ ] La croix sur l'entête de l'AnchorDialog doit permettre la fermeture de celle-ci.
-
-### Pour aller plus loin…
+      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank" rel="noreferrer">mon impact transport</a>._
 
 ![Capture d'écran AnchorDialog l'étape 3](README.assets/step3-final-result-anchordialog-2.png)
 
-Ajouter un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
-
-- [ ] **Titre** : L'équivalent CO2 (CO2e)
-- [ ] **Contenu** :
-      Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
-      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
-      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
-      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank"                      rel="noreferrer">mon impact transport</a>.
-
-- [ ] La croix sur l'entête de l'`AnchorDialog` doit permettre la fermeture de celle-ci.
 
 ## Étape 4, <small>⏱️ _~35/40 min_</small>
 
 L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
-Repartez de la branche "step-3".
+
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step3` :
+>
+> ```terminal
+> git checkout -b step3 origin/step3
+> ```
+
 Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
 Ce bouton permettra de switcher entre le tableau de produit et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
 
@@ -203,14 +211,14 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 
 - [ ] Créez un composant `ProductForm` qui va contenir le formulaire.
 
-Pour créer le formulaire vous aurez besoin des composants suivants :
+> 🔗 Pour créer le formulaire, vous aurez besoin des composants suivants :
+>
+>- `StringFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/StringFormFragment
+>- `ComboboxFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/ComboBoxFormFragment
+>- `RadioGroupFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Fieldset%20Form%20Fragments/RadioGroupFormFragment
+>- `NumberFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/NumberFormFragment
 
-- `StringFormFragment`
-- `ComboboxFormFragment`
-- `RadioGroupFormFragment`
-- `NumberFormFragment`
-
-🎨 Pour la disposition des champs pensez à utiliser les flexbox 😉
+> 🎨 Pour la disposition des champs pensez à utiliser les flexbox 😉
 
 - [ ] Ajoutez les deux boutons "Annuler et "Valider" en bas du formulaire.
   - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produit".
@@ -220,9 +228,26 @@ Pour créer le formulaire vous aurez besoin des composants suivants :
 
 - [ ] Personnalisez le `ComboboxFormFragment` en ajoutant un emoji devant chaque nom de mois.
 
-## Étape 5, <small>⏱️ _~?min_</small>
 
-L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`
+
+
+
+
+
+
+
+
+
+
+## Étape 5, <small>⏱️ _~60/90 min_</small>
+
+L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
+
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step3` :
+>
+> ```terminal
+> git checkout -b step4 origin/step4
+> ```
 
 ￼![Capture d'écran de l'état final de l'étape 5](README.assets/step5-final-result.png)
 
