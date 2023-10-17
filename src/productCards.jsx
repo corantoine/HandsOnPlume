@@ -1,16 +1,9 @@
-import { useRef, useState } from "react"
+import {useRef, useState} from "react"
 import PropTypes from "prop-types"
 import "./App.scss"
 
-import {
-	AnchorDialog,
-	Badge,
-	BadgeStatus,
-	Button,
-	MediaCard,
-	Tooltip,
-	TooltipVariant,
-} from "plume-react"
+import {AnchorDialog, Badge, BadgeStatus, Button, MediaCard, Tooltip, TooltipVariant,} from "plume-react"
+import useMonthStrings from "./useMonthStrings.js";
 
 const TooltifiedBadge = ({ id, label, status, tooltipContent }) => {
 	const badgeRef = useRef(undefined)
@@ -35,7 +28,8 @@ TooltifiedBadge.propTypes = {
 	tooltipContent: PropTypes.string.isRequired,
 }
 
-const ProductCards = ({ products, narrowMonthStrings, longMonthStrings }) => {
+const ProductCards = ({ products }) => {
+	const {narrowMonthStrings, longMonthStrings} = useMonthStrings()
 	const [localInterrogation, setLocalInterrogation] = useState(false)
 	const [co2Interrogation, setCO2Interrogation] = useState(false)
 
@@ -156,9 +150,7 @@ ProductCards.propTypes = {
 			pef: PropTypes.number,
 			CO2: PropTypes.number,
 		})
-	).isRequired,
-	narrowMonthStrings: PropTypes.array,
-	longMonthStrings: PropTypes.array,
+	).isRequired
 }
 ProductCards.defaultProps = {
 	narrowMonthStrings: [],
