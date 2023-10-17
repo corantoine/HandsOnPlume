@@ -194,7 +194,6 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 ![Capture d'écran AnchorDialog l'étape 3](README.assets/step3-final-result-anchordialog-2.png)
 
 
-
 ## Étape 4, <small>⏱️ _~35/40 min_</small>
 
 L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
@@ -208,7 +207,7 @@ L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'a
 Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
 Ce bouton permettra de switcher entre le tableau de produit et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
 
-￼![Capture d'écran de l'état final de l'étape 4](<README.assets/step4-final-result.png>)
+￼![Capture d'écran de l'état final de l'étape 4](README.assets/step4-final-result.png)
 
 - [ ] Créez un composant `ProductForm` qui va contenir le formulaire.
 
@@ -222,8 +221,8 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 > 🎨 Pour la disposition des champs pensez à utiliser les flexbox 😉
 
 - [ ] Ajoutez les deux boutons "Annuler et "Valider" en bas du formulaire.
-    - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produit".
-    - Le bouton "Valider" sera implémenté dans le step suivant.
+  - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produit".
+  - Le bouton "Valider" sera implémenté dans le step suivant.
 
 ### Pour aller plus loin…
 
@@ -244,32 +243,30 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 
 L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step3` :
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step4` :
 >
 > ```terminal
 > git checkout -b step4 origin/step4
 > ```
 
-￼![Capture d'écran de l'état final de l'étape 5](<README.assets/step5-final-result.png>)
+￼![Capture d'écran de l'état final de l'étape 5](README.assets/step5-final-result.png)
 
-
->ℹ️ Le fait d'utiliser un hook de validation à plusieurs avantages : 
+> ℹ️ Le fait d'utiliser un hook de validation à plusieurs avantages :
 >
->- Simplifier la mise en place de validation sur un state complexe
->- Découpler la validation métier de la partie comportement/scripting HTML
->- Déclencher la validation à n'importe quel endroit dans la vie du composant
-> 
-
+> - Simplifier la mise en place de validation sur un state complexe
+> - Découpler la validation métier de la partie comportement/scripting HTML
+> - Déclencher la validation à n'importe quel endroit dans la vie du composant
 
 - [ ] importez le hook `useValidatedState` et remplacez le hook `useState` par celui-ci
 
->ℹ️ En plus de retourner le `state` et la méthode `setState` classiques, le hook retourne un objet `errors` et une callback de validation `validate`.
+> ℹ️ En plus de retourner le `state` et la méthode `setState` classiques, le hook retourne un objet `errors` et une callback de validation `validate`.
 >
->L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenché.
+> L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenché.
 >
->La méthode `validate` prend en paramètre un objet de callback. Cet objet de callback doit être à l'image de l'objet `state`. La méthode `validate` retourne un objet de type : 
->```javascript
->{
+> La méthode `validate` prend en paramètre un objet de callback. Cet objet de callback doit être à l'image de l'objet `state`. La méthode `validate` retourne un objet de type :
+>
+> ```javascript
+> {
 >    errors,
 >    isFailure: () => isDefined(errors),
 >    isSuccess: () => nonDefined(errors),
@@ -278,33 +275,37 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 >            throw new Error(message);
 >        }
 >    }
->}
->``````
+> }
+> ```
 
-
->ℹ️ Par exemple, prenons le `state` suivant : 
->```javascript
->{
->   societaire: {
->       prenom: undefined
->       age: 42
->   }
->}
->```
+> ℹ️ Par exemple, prenons le `state` suivant :
 >
->l'appel de la méthode `validate` serai : 
->```javascript
->validate({
->   societaire: {
->       prenom: (it) => {
->            if ([undefined, null].includes(it.prenom)) return `Le prénom du sociétaire est obligatoire.`;
->        }
->   }
->})
->```
->retournera le speudo objet suivant :
->```javascript
->{
+> ```javascript
+> {
+> 	societaire: {
+> 		prenom: undefined
+> 		age: 42
+> 	}
+> }
+> ```
+>
+> l'appel de la méthode `validate` serai :
+>
+> ```javascript
+> validate({
+> 	societaire: {
+> 		prenom: (it) => {
+> 			if ([undefined, null].includes(it.prenom))
+> 				return `Le prénom du sociétaire est obligatoire.`
+> 		},
+> 	},
+> })
+> ```
+>
+> retournera le speudo objet suivant :
+>
+> ```javascript
+> {
 >    errors: {
 >        societaire: {
 >            prenom: `Le prénom du produit est obligatoire.`
@@ -313,30 +314,50 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 >    isFailure: () => true,
 >    isSuccess: () => false,
 >    throwErrorIfFail: (message) => throw new Error(message)
->}
->```
+> }
+> ```
 
->ℹ️ Pour information, le message levée par la méthode `throwErrorIfFail` est capturée par les composant `Form` de Plume et interprétée comme un message général.
-
+> ℹ️ Pour information, le message levée par la méthode `throwErrorIfFail` est capturée par les composant `Form` de Plume et interprétée comme un message général.
 
 - [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaires suivant :
-    - Nom du produit
-    - Mois de production
-    - PEF
-    - CO2
+
+  - Nom du produit
+  - Mois de production
+  - PEF
+  - CO2
 
 - [ ] Déclenchez une validation à la soumission du formulaire avec les règles suivantes :
-    - Le nom du produit est obligatoire.
-    - Au moins un mois doit être sélectionné.
-    - L'indicateur PEF est obligatoire.
-    - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
-    - L'indicateur CO2 est obligatoire.
-    - L'indicateur CO2 ne peut pas être négatif.
+
+  - Le nom du produit est obligatoire.
+  - Au moins un mois doit être sélectionné.
+  - L'indicateur PEF est obligatoire.
+  - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
+  - L'indicateur CO2 est obligatoire.
+  - L'indicateur CO2 ne peut pas être négatif.
 
 - [ ] N'oubliez pas de transmettre vos messages d'erreur aux différents fragments du formulaire.
-
 
 ### Pour aller plus loin…
 
 - [ ] Tranformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
 
+## Étape 6, <small>⏱️ _~?min_</small>
+
+L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon une date.
+
+> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step5` :
+>
+> ```terminal
+> git checkout -b step5 origin/step5
+> ```
+
+![Capture d'écran DateFormFragment de l'étape 6](README.assets/step6-final-result.png)
+
+- [ ] Ajoutez le composant `DateFormFragment` tel que présenté ci-dessus.
+
+  - La date par défaut doit être la date du jour
+  - Utilisez `useState` pour stocker la date saisie ou sélectionnée dans ce composant
+
+- [ ] Suite à la sélection d'une date, filtez les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
+
+  - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
