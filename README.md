@@ -1,4 +1,4 @@
-# Travaux pratique `Plume React`
+# Travaux pratiques `Plume React`
 
 Pour démarrer les travaux pratiques, clonez le projet `plume-react-vegetables-seasons` :
 
@@ -22,7 +22,7 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
 - [ ] Initialisez le système de versioning Git pour pouvoir travailler sur plusieurs branches.
   - `git init`
   - `Git checkout -b step-0`
-- [ ] Lancer l’application par défaut
+- [ ] Lancez l’application par défaut
   - `npm install`
   - `npm run dev`
   - Ouvrez votre navigateur à l’adresse http://localhost:5173/
@@ -54,15 +54,15 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > en cas de soucis de configuration : `npm config set registry http://nexus-fabfonc.maif.local/repository/npm-public/``
 
 - [ ] Initiez un layout de base avec une balise `header`, `main` et `footer`.
-  - Ajouter un titre principal « Est-ce bien la saison ? »
-  - Pour le footer, ajouter un message plein d’Amour
+  - Ajoutez un titre principal « Est-ce bien la saison ? »
+  - Pour le footer, ajoutez un message plein d’Amour
 
-> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’uiliser les balise HTML de base. Les attributs mai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
+> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’uiliser les balise HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
 
 - [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
 
   - Téléchargez et ajoutez dans votre projet le ficher products.json https://raw.github.maif.io/commons/plume-react-vegetables-seasons/step-1/src/assets/products.json?token=GHSAT0AAAAAAAAADLDMJFKEGJIZCNXPA7RQZJH73SA
-  - Importez le fichier dans votre App.jsx et affecter ces produits à une constantes
+  - Importez le fichier dans votre App.jsx et affectez ces produits à une constante
   - Affichez le nom et l’emoji des produits en utilisant le composant MediaCard https://pages.github.maif.io/commons/plume-react/#/Layout/MediaCard
 
 - [ ] Mettons un peu de peinture là dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
@@ -120,7 +120,7 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 
 ￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-1` :
+> ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-1` :
 >
 > ```terminal
 > git checkout -b step-1 origin/step-1
@@ -136,7 +136,7 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 
 ### Pour aller plus loin…
 
-Le but est de générer le tableau de façon automatique et de profiter de l'internationnalisation de la fonction `toLocaleTimeString()` de l'API Date intégré directement au langage Javascript.
+Le but est de générer le tableau de façon automatique et de profiter de l'internationnalisation de la fonction `toLocaleTimeString()` de l'API Date intégrée directement au langage Javascript.
 
 - [ ] Générez le tableau à l’aide de l’API Date de javascript :p
   - https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp
@@ -156,7 +156,7 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 
 
 
-- [ ] Ajoutez un `Tooltip` au `Badge` d'intiale du mois afin d'afficher le mois complet.
+- [ ] Ajoutez un `Tooltip` au `Badge` contenant l'initiale du mois afin d'afficher le mois complet.
 
 > 🔗 https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
@@ -181,7 +181,7 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 ### Pour aller plus loin…
 
 
-- [ ] Ajouter un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
+- [ ] Ajoutez un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
 
   - Titre : _L'équivalent CO2 (CO2e)_
   - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
@@ -198,14 +198,14 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 
 L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-3` :
+> ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-3` :
 >
 > ```terminal
 > git checkout -b step-3 origin/step-3
 > ```
 
 Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
-Ce bouton permettra de switcher entre le tableau de produit et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
+Ce bouton permettra de switcher entre le tableau de produits et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
 
 ￼![Capture d'écran de l'état final de l'étape 4](README.assets/step4-final-result.png)
 
@@ -243,7 +243,7 @@ Ce bouton permettra de switcher entre le tableau de produit et le formulaire. No
 
 L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-4` :
+> ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-4` :
 >
 > ```terminal
 > git checkout -b step-4 origin/step-4
@@ -251,7 +251,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 ￼![Capture d'écran de l'état final de l'étape 5](README.assets/step5-final-result.png)
 
-> ℹ️ Le fait d'utiliser un hook de validation à plusieurs avantages :
+> ℹ️ Le fait d'utiliser un hook de validation a plusieurs avantages :
 >
 > - Simplifier la mise en place de validation sur un state complexe
 > - Découpler la validation métier de la partie comportement/scripting HTML
@@ -261,7 +261,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 > ℹ️ En plus de retourner le `state` et la méthode `setState` classiques, le hook retourne un objet `errors` et une callback de validation `validate`.
 >
-> L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenché.
+> L'objet `errors` est l'image de l'object `state` mais chaque valeur de clé peut retourner un message (ie chaîne de caractères). Ce dernier est construit à chaque fois que la méthode `validate` est déclenchée.
 >
 > La méthode `validate` prend en paramètre un objet de callback. Cet objet de callback doit être à l'image de l'objet `state`. La méthode `validate` retourne un objet de type :
 >
@@ -289,7 +289,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 > }
 > ```
 >
-> l'appel de la méthode `validate` serai :
+> l'appel de la méthode `validate` serait :
 >
 > ```javascript
 > validate({
@@ -302,7 +302,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 > })
 > ```
 >
-> retournera le speudo objet suivant :
+> retournera le pseudo objet suivant :
 >
 > ```javascript
 > {
@@ -317,7 +317,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 > }
 > ```
 
-> ℹ️ Pour information, le message levée par la méthode `throwErrorIfFail` est capturée par les composant `Form` de Plume et interprétée comme un message général.
+> ℹ️ Pour information, le message levé par la méthode `throwErrorIfFail` est capturé par le composant `Form` de Plume et interprété comme un message général.
 
 - [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaires suivant :
 
@@ -341,11 +341,11 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 - [ ] Tranformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
 
-## Étape 6, <small>⏱️ _~?min_</small>
+## Étape 6, <small>⏱️ _~20min_</small>
 
 L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon une date.
 
-> ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-5` :
+> ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-5` :
 >
 > ```terminal
 > git checkout -b step-5 origin/step-5
@@ -358,6 +358,6 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
   - La date par défaut doit être la date du jour
   - Utilisez `useState` pour stocker la date saisie ou sélectionnée dans ce composant
 
-- [ ] Suite à la sélection d'une date, filtez les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
+- [ ] Suite à la sélection d'une date, filtrez les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
 
   - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
