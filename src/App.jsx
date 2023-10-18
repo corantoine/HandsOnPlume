@@ -21,6 +21,9 @@ function App() {
                          onSubmit={product => {
                              setProducts([...products, product])
                              setAddMode(false)
+                         }}
+                         onCancel={() => {
+                             setAddMode(false)
                          }}/>
         </> : <>
             <ProductCards className="products" products={products}/>

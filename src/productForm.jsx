@@ -4,21 +4,27 @@ import PropTypes from "prop-types";
 import useMonthStrings from "./useMonthStrings";
 import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment} from "plume-react";
 
-const ProductForm = ({id, className, onSubmit}) => {
+
+const emptyProduct = {
+    label: {
+        fr: undefined
+    },
+    months: undefined,
+    emoji: undefined,
+    local: undefined,
+    pef: undefined,
+    CO2: undefined
+};
+const ProductForm = ({id, className, onSubmit, onCancel}) => {
     const {longMonthStrings} = useMonthStrings()
-    const [product, setProduct] = useState({
-        label: {
-            fr: undefined
-        },
-        months: undefined,
-        emoji: undefined,
-        local: undefined,
-        pef: undefined,
-        CO2: undefined
-    })
+    const [product, setProduct] = useState(emptyProduct)
 
     return <Form id={id}
                  className={["product-form", className].filter(Boolean).join(' ')}
+                 onCancel={() => {
+                     setProduct(emptyProduct)
+                     onCancel();
+                 }}
                  onSubmit={() => {
                      onSubmit(product)
                  }}>
@@ -96,12 +102,14 @@ const ProductForm = ({id, className, onSubmit}) => {
 ProductForm.propTypes = {
     id: PropTypes.string.isRequired,
     className: PropTypes.string,
-    onSubmit: PropTypes.func
+    onSubmit: PropTypes.func,
+    onCancel: PropTypes.func
 }
 
 ProductForm.defaultProps = {
     className: undefined,
     onSubmit: () => undefined,
+    onCancel: () => undefined,
 }
 
 export default ProductForm
