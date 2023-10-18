@@ -1,8 +1,11 @@
 import {useState} from "react";
-import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment} from "plume-react";
 import PropTypes from "prop-types";
 
-const ProductForm = ({setAddMode, products, setProducts, longMonthStrings}) => {
+import useMonthStrings from "./useMonthStrings";
+import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment} from "plume-react";
+
+const ProductForm = ({id, className, onSubmit}) => {
+    const {longMonthStrings} = useMonthStrings()
     const [product, setProduct] = useState({
         label: {
             fr: undefined
@@ -14,11 +17,10 @@ const ProductForm = ({setAddMode, products, setProducts, longMonthStrings}) => {
         CO2: undefined
     })
 
-    return <Form id="product-form-0"
-                 className="product-form"
+    return <Form id={id}
+                 className={["product-form", className].filter(Boolean).join(' ')}
                  onSubmit={() => {
-                     setProducts([...products, product])
-                     setAddMode(false)
+                     onSubmit(product)
                  }}>
         <StringFormFragment
             id="label"
@@ -66,7 +68,10 @@ const ProductForm = ({setAddMode, products, setProducts, longMonthStrings}) => {
         <RadioGroupFormFragment
             id="local"
             label="Est-ce un produit local ?"
-            options={[{value: 'true', label: '🇫🇷 Local'}, {value: 'false', label: '✈️ Non local'}]}
+            options={[
+                {value: 'true', label: '🇫🇷 Local'},
+                {value: 'false', label: '✈️ Non local'}
+            ]}
             value={product?.local ? 'true' : 'false'}
             onValueChange={local => setProduct({...product, local: local === 'true'})}
             inlined
@@ -89,26 +94,14 @@ const ProductForm = ({setAddMode, products, setProducts, longMonthStrings}) => {
     </Form>
 }
 ProductForm.propTypes = {
-    setAddMode: PropTypes.func,
-    products: PropTypes.shape({
-        label: PropTypes.shape({
-            fr: PropTypes.string.isRequired
-        }),
-        months: PropTypes.arrayOf(PropTypes.number).isRequired,
-        emoji: PropTypes.string.isRequired,
-        local: PropTypes.bool,
-        pef: PropTypes.number,
-        CO2: PropTypes.number,
-    }),
-    setProducts: PropTypes.func,
-    longMonthStrings: PropTypes.array
+    id: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    onSubmit: PropTypes.func
 }
 
 ProductForm.defaultProps = {
-    setAddMode: () => undefined,
-    products: undefined,
-    setProducts: () => undefined,
-    longMonthStrings: []
+    className: undefined,
+    onSubmit: () => undefined,
 }
 
 export default ProductForm

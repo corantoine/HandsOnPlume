@@ -1,48 +1,34 @@
-import ProductCards from "./productCards.jsx"
-import "./App.scss"
-import initialProducts from "./assets/products.json"
-
 import {useState} from "react"
+import "./App.scss"
+
+import initialProducts from "./assets/products.json"
 import {Button} from "plume-react"
+import ProductForm from "./productForm";
+import ProductCards from "./productCards";
 
 
 function App() {
-    const products = initialProducts
-    const [addMode, setAddMode] = useState(false)
-
-    return <>
     const [products, setProducts] = useState(initialProducts)
     const [addMode, setAddMode] = useState(false)
 
-    return (<>
+    return <>
         <header>
             <h1>Est-ce bien la saison ?</h1>
         </header>
-        <main>{addMode ? (<>
-            <h2>Ajouter un Produit</h2>
-            <span>Intégrer ici un formulaire</span>
-        </>) : (<>
-            <ProductCards products={products}/>
-            <div className='products-actions'>
-                <Button
-                    className='product-add-handler'
-                    primary
-                    onClick={() => setAddMode(true)}
-                >Ajouter un produit</Button>
         <main>{addMode ? <>
             <h2>Ajouter un Produit</h2>
-            <ProductForm longMonthStrings={longMonthStrings}
-                         setAddMode={setAddMode}
-                         products={products}
-                         setProducts={setProducts}
-            /></> : <>
-            <ProductCards className="products" products={products} narrowMonthStrings={narrowMonthStrings} longMonthStrings={longMonthStrings}/>
+            <ProductForm id="product-form-0"
+                         onSubmit={product => {
+                             setProducts([...products, product])
+                             setAddMode(false)
+                         }}/>
+        </> : <>
+            <ProductCards className="products" products={products}/>
             <div className="products-actions">
                 <Button className="product-add-handler" primary onClick={() => setAddMode(true)}>
                     Ajouter un produit
                 </Button>
             </div>
-        </>)}
         </>}
         </main>
         <footer>
@@ -56,7 +42,6 @@ function App() {
             </div>
         </footer>
     </>
-    </>)
 }
 
 export default App
