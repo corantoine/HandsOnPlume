@@ -9,10 +9,12 @@ $grid-breakpoints: (
         md: 768px,
         lg: 992px,
         xl: 1200px,
-        xxl: 1400px
+        xxl: 1400px,
 );
 
-header, main, footer {
+header,
+main,
+footer {
   padding: 1rem 1rem;
   width: 100%;
 
@@ -75,7 +77,7 @@ footer {
 
 a {
   color: clr(primary);
-  @include active()
+  @include active();
 }
 
 .products {
@@ -115,14 +117,16 @@ a {
           font-weight: bold;
         }
 
-        &--local, &--co2 {
+        &--local,
+        &--co2 {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           gap: spc(m);
         }
 
-        &--local .local-interrogation-handler, &--co2 .co2-interrogation-handler{
+        &--local .local-interrogation-handler,
+        &--co2 .co2-interrogation-handler {
           border-radius: 1000px;
           min-width: unset;
           height: calc(#{$fontSizeUnit} / 2 + #{spc(m)} * 2);
