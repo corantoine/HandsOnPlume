@@ -361,3 +361,7 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
 - [ ] Suite à la sélection d'une date, filtrez les produits afin de n'afficher que ceux disponibles par rapport à la date sélectionnée.
 
   - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
+
+
+## ROTI 
+merci de nous laissez votre avis sur la formation : https://roti.express/r/z8qnre
