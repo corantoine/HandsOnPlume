@@ -364,4 +364,4 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
 
 
 ## ROTI 
-merci de nous laissez votre avis sur la formation : https://roti.express/r/z8qnre
+merci de nous laisser votre avis sur la formation : https://roti.express/r/z8qnre
