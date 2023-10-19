@@ -61,7 +61,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 - [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
 
-  - Téléchargez et ajoutez dans votre projet le ficher products.json https://raw.github.maif.io/commons/plume-react-vegetables-seasons/step-1/src/assets/products.json?token=GHSAT0AAAAAAAAADLDMJFKEGJIZCNXPA7RQZJH73SA
+  - Téléchargez et ajoutez dans votre projet le ficher products.json https://github.maif.io/commons/plume-react-vegetables-seasons/raw/step-1/src/assets/products.json
   - Importez le fichier dans votre App.jsx et affectez ces produits à une constante
   - Affichez le nom et l’emoji des produits en utilisant le composant MediaCard https://pages.github.maif.io/commons/plume-react/#/Layout/MediaCard
 
