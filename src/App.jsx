@@ -17,7 +17,8 @@ function App() {
         <main>{addMode ? (<>
             <h2>Ajouter un Produit</h2>
             <span>Intégrer ici un formulaire</span>
-        </>) : (<>
+        </>) : (<section>
+            <h2>Liste des produits :</h2>
             <ProductCards products={products}/>
             <div className='products-actions'>
                 <Button
@@ -26,17 +27,14 @@ function App() {
                     onClick={() => setAddMode(true)}
                 >Ajouter un produit</Button>
             </div>
-        </>)}
+        </section>)}
         </main>
         <footer>
-            <div className='love-message'>
-                Conçu et construit avec tout l&apos;amour du monde par l&apos;équipe
-                🦚 avec l&apos;aide de nos contributeurs des Coding Days 👨‍💻👨‍💻.
-            </div>
-            <div className='source-message'>
-                Cette application est fortement inspirée de
-                <a href='https://mesfruitsetlegumesdesaison.fr.'>https://mesfruitsetlegumesdesaison.fr.</a>
-            </div>
+            <p>Conçu et construit avec tout l'amour du monde par l'équipe 🦚 avec l'aide
+                de nos contributeurs des Coding Days 👨‍💻👨‍💻.
+                <q>Cette application est fortement inspirée de <a
+                    href="https://mesfruitsetlegumesdesaison.fr.">https://mesfruitsetlegumesdesaison.fr.</a></q>
+            </p>
         </footer>
     </>
 }
