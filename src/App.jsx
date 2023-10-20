@@ -21,34 +21,36 @@ function App() {
                 <h1>Est-ce bien la saison ?</h1>
             </header>
             <main>
-                <div className="products">{products.map((product, i) =>
-                    <MediaCard key={`product-${i}`}
-                               className="product"
-                               media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}>
-                        <div className="product-availability-months">{months('narrow').map((month, j) =>
-                            <Badge key={`product-${i}-availability-months-${j}`}
-                                   status={product.months.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}>
-                                {month}
-                            </Badge>)}
-                        </div>
-                        <div className="product-some-numbers">
-                            <div className="product-some-numbers--local">
-                                {product.local ? '🇫🇷 Local' : '✈️ Non local'}
+                <section>
+                    <h2>Liste des produits :</h2>
+                    <div className="products">{products.map((product, i) =>
+                        <MediaCard key={`product-${i}`}
+                                   className="product"
+                                   media={[product.label.fr, product.emoji].filter(Boolean).join(' ')}>
+                            <div className="product-availability-months">{months('narrow').map((month, j) =>
+                                <Badge key={`product-${i}-availability-months-${j}`}
+                                       status={product.months.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}>
+                                    {month}
+                                </Badge>)}
                             </div>
-                            <div className="product-some-numbers--local">
-                                <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
+                            <div className="product-some-numbers">
+                                <div className="product-some-numbers--local">
+                                    {product.local ? '🇫🇷 Local' : '✈️ Non local'}
+                                </div>
+                                <div className="product-some-numbers--local">
+                                    <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
+                                </div>
                             </div>
-                        </div>
-                    </MediaCard>)}
-                </div>
+                        </MediaCard>)}
+                    </div>
+                </section>
             </main>
             <footer>
-                <div className="love-message">Conçu et construit avec tout l'amour du monde par l'équipe 🦚 avec l'aide
-                    de
-                    nos contributeurs des Coding Days 👨‍💻👨‍💻.
-                </div>
-                <div className="source-message">Cette application est fortement inspirée de <a
-                    href="https://mesfruitsetlegumesdesaison.fr.">https://mesfruitsetlegumesdesaison.fr.</a></div>
+                <p>Conçu et construit avec tout l'amour du monde par l'équipe 🦚 avec l'aide
+                    de nos contributeurs des Coding Days 👨‍💻👨‍💻.
+                <q>Cette application est fortement inspirée de <a
+                    href="https://mesfruitsetlegumesdesaison.fr.">https://mesfruitsetlegumesdesaison.fr.</a></q>
+                </p>
             </footer>
         </>
     )
