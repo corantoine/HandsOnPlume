@@ -242,7 +242,7 @@ Ce bouton permettra de switcher entre le tableau de produits et le formulaire. N
 
 
 
-## Étape 5, <small>⏱️ _~60/90 min_</small>
+## Étape 5, <small>⏱️ _~30 min_</small>
 
 L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce que nous allons faire dans cette étape 5 à l'aide du hook `useValidatedState`.
 
@@ -335,7 +335,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
   - Au moins un mois doit être sélectionné.
   - L'indicateur PEF est obligatoire.
   - Un PEF doit être compris entre 0 et 1.
-  - Il n'est pas possible d'avoir un indicateur PEF faible avec un taux kgCO2e/kg élevé.
+  - Il n'est pas possible d'avoir un indicateur PEF faible avec un taux kgCO2e/kg élevé. (par exemple : si le CO2 est plus grand que 1, le PEF doit être supérieur à 0.2)
   - L'indicateur CO2 est obligatoire.
   - L'indicateur CO2 ne peut pas être négatif.
 
