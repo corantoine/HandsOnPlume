@@ -6,7 +6,7 @@ Pour démarrer les travaux pratiques, clonez le projet `plume-react-vegetables-s
 git clone git@github.maif.io:commons/plume-react-vegetables-seasons.git
 ```
 
-L'étape 0 initalise un projet ViteJS. Cette étape est de la configuration d'outils. Elle n'est pas obligatoire pour la suite des travaux.
+L'étape 0 initialise un projet ViteJS. Cette étape est de la configuration d'outils. Elle n'est pas obligatoire pour la suite des travaux.
 
 Un temps d'échange de ⏱️ ~15/20min est prévu entre chaque étape pour présenter une solution et l'étape suivante.
 
@@ -57,15 +57,15 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
   - Ajoutez un titre principal « Est-ce bien la saison ? »
   - Pour le footer, ajoutez un message plein d’Amour
 
-> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’uiliser les balise HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
+> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’utiliser les balise HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
 
 - [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
 
-  - Téléchargez et ajoutez dans votre projet le ficher products.json https://github.maif.io/commons/plume-react-vegetables-seasons/raw/step-1/src/assets/products.json
+  - Téléchargez et ajoutez dans votre projet le fichier products.json https://github.maif.io/commons/plume-react-vegetables-seasons/raw/step-1/src/assets/products.json
   - Importez le fichier dans votre App.jsx et affectez ces produits à une constante
   - Affichez le nom et l’emoji des produits en utilisant le composant MediaCard https://pages.github.maif.io/commons/plume-react/#/Layout/MediaCard
 
-- [ ] Mettons un peu de peinture là dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- [ ] Mettons un peu de peinture là-dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 - [ ] Importez le thème `@import "~plume-react/dist/style/theme-maif-dsi`;
 
@@ -97,6 +97,8 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > ```
 
 ### Pour aller plus loin…
+
+- [ ] Importez le thème utilities plume-react `@import '~plume-react/dist/style/theme-utilities'`;
 
 - [ ] Jouez avec les variables provenant du thème plume, par exemple, à l’aide des mixin `clr(primary)` ou `spc(m)`...
 
@@ -132,11 +134,11 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 - [ ] Mise en avant kgCO2e/kg
 - [ ] N’oubliez pas d’utiliser les variables et Mixin SCSS de Plume 😝
 - [ ] Flex Flex Flex… wrap & space-between
-- [ ] Pensez à utiliser le Nullish coalescing operator (??) lorsque l’infomation n’est pas présente dans votre DataSource https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+- [ ] Pensez à utiliser le Nullish coalescing operator (??) lorsque l’information n’est pas présente dans votre DataSource https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 ### Pour aller plus loin…
 
-Le but est de générer le tableau de façon automatique et de profiter de l'internationnalisation de la fonction `toLocaleTimeString()` de l'API Date intégrée directement au langage Javascript.
+Le but est de générer le tableau de façon automatique et de profiter de l'internationalisation de la fonction `toLocaleTimeString()` de l'API Date intégrée directement au langage Javascript.
 
 - [ ] Générez le tableau à l’aide de l’API Date de javascript :p
   - https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp
@@ -170,7 +172,7 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
   - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
       locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
       l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
+      que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
       de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
       transport terrestre et le bateau._
 
@@ -187,9 +189,9 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
   - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
       locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
       l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-      que ces produits ont du faire un long voyage pour arriver jusque notre assiette. L’avion est le mode
+      que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
       de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grace à notre simulateur <a href="https://impactco2.fr/transport" target="_blank" rel="noreferrer">mon impact transport</a>._
+      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grâce à notre simulateur <a href="https://impactco2.fr/transport" target="_blank" rel="noreferrer">mon impact transport</a>._
 
 ![Capture d'écran AnchorDialog l'étape 3](README.assets/step3-final-result-anchordialog-2.png)
 
@@ -204,7 +206,7 @@ L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'a
 > git checkout -b step-3 origin/step-3
 > ```
 
-Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" à été ajouté en bas de page.
+Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" a été ajouté en bas de page.
 Ce bouton permettra de switcher entre le tableau de produits et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
 
 ￼![Capture d'écran de l'état final de l'étape 4](README.assets/step4-final-result.png)
@@ -213,8 +215,9 @@ Ce bouton permettra de switcher entre le tableau de produits et le formulaire. N
 
 > 🔗 Pour créer le formulaire, vous aurez besoin des composants suivants :
 >
+>- `Form` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form
 >- `StringFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/StringFormFragment
->- `ComboboxFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/ComboBoxFormFragment
+>- `ComboboxFormFragment` (en mode sélection multiple) : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/ComboBoxFormFragment
 >- `RadioGroupFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Fieldset%20Form%20Fragments/RadioGroupFormFragment
 >- `NumberFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/NumberFormFragment
 
@@ -319,7 +322,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 > ℹ️ Pour information, le message levé par la méthode `throwErrorIfFail` est capturé par le composant `Form` de Plume et interprété comme un message général.
 
-- [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaires suivant :
+- [ ] Ajoutez la notion de `mandatory`sur les fragments du formulaire suivant :
 
   - Nom du produit
   - Mois de production
@@ -331,7 +334,8 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
   - Le nom du produit est obligatoire.
   - Au moins un mois doit être sélectionné.
   - L'indicateur PEF est obligatoire.
-  - Il est impossible d'avoir un indicateur PEF si faible avec un taux kgCO2e/kg si élevé.
+  - Un PEF doit être compris entre 0 et 1.
+  - Il n'est pas possible d'avoir un indicateur PEF faible avec un taux kgCO2e/kg élevé.
   - L'indicateur CO2 est obligatoire.
   - L'indicateur CO2 ne peut pas être négatif.
 
@@ -339,7 +343,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 
 ### Pour aller plus loin…
 
-- [ ] Tranformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
+- [ ] Transformez votre composant Plume `Form` par un `NumberedWizardForm` et déclenchez certaines validations au changement d'étapes `onBeforeNextStepChange` 😎.
 
 ## Étape 6, <small>⏱️ _~20min_</small>
 
@@ -363,5 +367,5 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
   - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
 
 
-## ROTI 
-merci de nous laisser votre avis sur la formation : https://roti.express/r/z8qnre
+## Feedbacks
+Merci de nous laisser votre avis sur la formation : https://forms.office.com/e/e5ynrJ92Q3
