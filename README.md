@@ -57,7 +57,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
   - Ajoutez un titre principal « Est-ce bien la saison ? »
   - Pour le footer, ajoutez un message plein d’Amour
 
-> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’utiliser les balise HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
+> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’utiliser les balises HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
 
 - [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
 
