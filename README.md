@@ -229,8 +229,7 @@ Ce bouton permettra de switcher entre le tableau de produits et le formulaire. N
      - elle doit s'afficher et disparaitre au bout de 5 secondes
      - Le contenu de la notification doit être : Le produit (nom_du_produit_saisi_sur_formulaire) a été créé !
 								
-	> ℹ️ Lorsqu'une notification est affichée, le contenu de celle-ci doit être poussé dans la Zone live afin que ce contenu puisse être lu par les les technologies d'assistances.
-  > Si vous utilisez le provider Notification, il est impératif d'utiliser le provider `A11yProvider` (en tant que provider "parent" du provider Notification) afin que votre application répondent aux exigences de l'accessibilité.
+> ℹ️ Lorsqu'une notification est affichée, le contenu de celle-ci doit être poussé dans la Zone live afin que ce contenu puisse être lu par les les technologies d'assistances. Si vous utilisez le provider Notification, il est impératif d'utiliser le provider `A11yProvider`en tant que provider "parent" du provider Notification afin que votre application répondent aux exigences de l'accessibilité. Documentatiion ici : https://pages.github.maif.io/commons/plume-react/#/Contextes/a11y%20R%C3%A9gion%20Live
   
   
 
