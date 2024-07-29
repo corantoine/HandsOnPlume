@@ -78,9 +78,9 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > Une petite config ViteJS nécessaire
 >
 > ```javascript
-> import { defineConfig } from "vite"
-> import react from "@vitejs/plugin-react"
-> import { join } from "path"
+> import { defineConfig } from 'vite'
+> import react from '@vitejs/plugin-react'
+> import { join } from 'path'
 >
 > // https://vitejs.dev/config/
 > export default defineConfig({
@@ -89,7 +89,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > 		alias: [
 > 			{
 > 				find: /~(.+)/,
-> 				replacement: join(globalThis.process.cwd(), "node_modules/$1"),
+> 				replacement: join(globalThis.process.cwd(), 'node_modules/$1'),
 > 			},
 > 		],
 > 	},
@@ -120,7 +120,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard` : Javascript comme un expert, API Date et composant `Badge`.
 
-￼![Capture d'écran de l'état final de l'étape 2](<README.assets/step2-final-result.png>)
+￼![Capture d'écran de l'état final de l'étape 2](README.assets/step2-final-result.png)
 
 > ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-1` :
 >
@@ -156,25 +156,21 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 > git checkout -b step-2 origin/step-2
 > ```
 
-
-
 - [ ] Ajoutez un `Tooltip` au `Badge` contenant l'initiale du mois afin d'afficher le mois complet.
 
 > 🔗 https://pages.github.maif.io/commons/plume-react/#/Tooltips/Tooltip
 
 ![Capture d'écran Tooltip l'étape 3](README.assets/step3-final-result-tooltip.png)
 
-
-
 - [ ] Ajoutez un bouton (?) à droite du libellé Local et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog`` avec les caractéristiques suivantes :
 
   - Titre : _Pourquoi consommer local ?_
   - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
-      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
-      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-      que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
-      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-      transport terrestre et le bateau._
+    locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
+    l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
+    que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
+    de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
+    transport terrestre et le bateau._
 
 > 🔗 https://pages.github.maif.io/commons/plume-react/#/Dialogs/AnchorDialog
 
@@ -182,21 +178,19 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 
 ### Pour aller plus loin…
 
-
 - [ ] Ajoutez un bouton (?) à droite du libellé **kgCO2e/kg** et lui associer une `AnchorDialog`. Un clic sur ce bouton doit afficher l'`AnchorDialog` avec les caractéristiques suivantes :
 
   - Titre : _L'équivalent CO2 (CO2e)_
   - Contenu : _Se fournir chez les agriculteurs du territoire leur permet de soutenir une activité économique
-      locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
-      l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
-      que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
-      de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
-      transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grâce à notre simulateur <a href="https://impactco2.fr/transport" target="_blank" rel="noreferrer">mon impact transport</a>._
+    locale, de réduire les transports et les pertes, ainsi que de mieux connaître la qualité et
+    l’origine des produits. Quand on consomme des aliments qui viennent de loin, il ne faut pas oublier
+    que ces produits ont dû faire un long voyage pour arriver jusqu'à notre assiette. L’avion est le mode
+    de transport le plus consommateur d’énergie et émetteur de gaz à effet de serre, suivi par le
+    transport terrestre et le bateau. Si vous souhaitez aller plus loin dans votre démarche, vous pouvez comparer différents moyens de transport grâce à notre simulateur <a href="https://impactco2.fr/transport" target="_blank" rel="noreferrer">mon impact transport</a>._
 
 ![Capture d'écran AnchorDialog l'étape 3](README.assets/step3-final-result-anchordialog-2.png)
 
-
-## Étape 4, <small>⏱️ _~35/40 min_</small>
+## Étape 4, <small>⏱️ _~40/45 min_</small>
 
 L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'aide des différents composants moléculaires formElement.
 
@@ -206,7 +200,7 @@ L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'a
 > git checkout -b step-3 origin/step-3
 > ```
 
-Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" a été ajouté en bas de page.
+Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" a été ajouté en haut de page.
 Ce bouton permettra de switcher entre le tableau de produits et le formulaire. Nous simulerons ainsi un changement de page entre le mode "tableau de produits" et le mode "ajout de produit".
 
 ￼![Capture d'écran de l'état final de l'étape 4](README.assets/step4-final-result.png)
@@ -215,32 +209,25 @@ Ce bouton permettra de switcher entre le tableau de produits et le formulaire. N
 
 > 🔗 Pour créer le formulaire, vous aurez besoin des composants suivants :
 >
->- `Form` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form
->- `StringFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/StringFormFragment
->- `ComboboxFormFragment` (en mode sélection multiple) : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/ComboBoxFormFragment
->- `RadioGroupFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Fieldset%20Form%20Fragments/RadioGroupFormFragment
->- `NumberFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/NumberFormFragment
+> - `Form` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form
+> - `StringFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/StringFormFragment
+> - `ComboboxFormFragment` (en mode sélection multiple) : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/ComboBoxFormFragment
+> - `RadioGroupFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Fieldset%20Form%20Fragments/RadioGroupFormFragment
+> - `NumberFormFragment` : https://pages.github.maif.io/commons/plume-react/#/Forms/Form%20Fragments/NumberFormFragment
 
 > 🎨 Pour la disposition des champs pensez à utiliser les flexbox 😉
 
 - [ ] Ajoutez les deux boutons "Annuler et "Valider" en bas du formulaire.
-  - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produit".
-  - Le bouton "Valider" sera implémenté dans le step suivant.
+
+  - Le bouton "Annuler" doit permettre de revenir vers le mode "tableau de produits".
+  - Le bouton "Valider" doit ajouter le produit aux produits existants et revernir sur la vue "Liste des produits".
+
+- [ ] Affichez une notification afin d'indiquer que le produit a bien été créé.
+  > `Notification` : https://pages.github.maif.io/commons/plume-react/#/Contextes/Notifications/Notifications%20globales
 
 ### Pour aller plus loin…
 
 - [ ] Personnalisez le `ComboboxFormFragment` en ajoutant un emoji devant chaque nom de mois.
-
-
-
-
-
-
-
-
-
-
-
 
 ## Étape 5, <small>⏱️ _~30 min_</small>
 
@@ -366,6 +353,6 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
 
   - Utilisez un `useEffect` pour mettre à jour la liste des produits filtrée selon la date saisie.
 
-
 ## Feedbacks
+
 Merci de nous laisser votre avis sur la formation : https://forms.office.com/e/e5ynrJ92Q3
