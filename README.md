@@ -223,7 +223,16 @@ Ce bouton permettra de switcher entre le tableau de produits et le formulaire. N
   - Le bouton "Valider" doit ajouter le produit aux produits existants et revernir sur la vue "Liste des produits".
 
 - [ ] Affichez une notification afin d'indiquer que le produit a bien été créé.
-  > `Notification` : https://pages.github.maif.io/commons/plume-react/#/Contextes/Notifications/Notifications%20globales
+  > - `Notification` : https://pages.github.maif.io/commons/plume-react/#/Contextes/Notifications/Notifications%20globales
+  - Les paramètres de la notification sont les suivants :
+     - la notification est de type SUCCES
+     - elle doit s'afficher et disparaitre au bout de 5 secondes
+     - Le contenu de la notification doit être : Le produit (nom_du_produit_saisi_sur_formulaire) a été créé !
+								
+	> ℹ️ Lorsqu'une notification est affichée, le contenu de celle-ci doit être poussé dans la Zone live afin que ce contenu puisse être lu par les les technologies d'assistances.
+  > Si vous utilisez le provider Notification, il est impératif d'utiliser le provider `A11yProvider` (en tant que provider "parent" du provider Notification) afin que votre application répondent aux exigences de l'accessibilité.
+  
+  
 
 ### Pour aller plus loin…
 
