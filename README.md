@@ -125,7 +125,7 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 > ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-1` :
 >
 > ```terminal
-> git checkout -b step-1 origin/step-1
+> git checkout step-1
 > ```
 
 - [ ] Créez un tableau javascript ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
