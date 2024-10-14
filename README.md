@@ -197,7 +197,7 @@ L’objectif de l'étape 4 est de créer un formulaire d'ajout de produit à l'a
 > ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-3` :
 >
 > ```terminal
-> git checkout -b step-3 origin/step-3
+> git checkout step-3
 > ```
 
 Sur cette branche, le composant `ProductCards` a été externalisé et un bouton "Ajouter un produit" a été ajouté en haut de page.
