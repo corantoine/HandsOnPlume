@@ -244,7 +244,7 @@ L'intégration d'un formulaire s'accompagne toujours d'une validation. C'est ce 
 > ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-4` :
 >
 > ```terminal
-> git checkout -b step-4 origin/step-4
+> git checkout step-4
 > ```
 
 ￼![Capture d'écran de l'état final de l'étape 5](README.assets/step5-final-result.png)
@@ -347,7 +347,7 @@ L'objectif de ce step est d'ajouter un filtre sur les produits disponibles selon
 > ℹ️ Pour partir sur de bonnes bases, n'hésitez pas à récupérer la branche `step-5` :
 >
 > ```terminal
-> git checkout -b step-5 origin/step-5
+> git checkout step-5
 > ```
 
 ![Capture d'écran DateFormFragment de l'étape 6](README.assets/step6-final-result.png)
