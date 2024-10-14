@@ -67,7 +67,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 
 - [ ] Mettons un peu de peinture là-dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-- [ ] Importez le thème `@import "~plume-react/dist/style/theme-maif-dsi`;
+- [ ] Importez le thème `@import "~plume-react/dist/style/theme-maif-dsi"`;
 
 > 🚨 Attention
 >
