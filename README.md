@@ -153,7 +153,7 @@ L’objectif de l'étape 3 est d'intégrer 2 autres composants : `Tooltip` et `A
 > ℹ️ Pour partir sur de bonne base, n'hésitez pas à récupérer la branche `step-2` :
 >
 > ```terminal
-> git checkout -b step-2 origin/step-2
+> git checkout step-2
 > ```
 
 - [ ] Ajoutez un `Tooltip` au `Badge` contenant l'initiale du mois afin d'afficher le mois complet.
