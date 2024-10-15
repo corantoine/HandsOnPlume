@@ -133,7 +133,7 @@ L’objectif de l'étape 2 est d’améliorer le contenu de composant `MediaCard
 - [ ] Le produit est-il local ?
 - [ ] Mise en avant kgCO2e/kg
 - [ ] N’oubliez pas d’utiliser les variables et Mixin SCSS de Plume 😝
-- [ ] Flex Flex Flex… wrap & space-between
+- [ ] Grid, grid-template...
 - [ ] Pensez à utiliser le Nullish coalescing operator (??) lorsque l’information n’est pas présente dans votre DataSource https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 ### Pour aller plus loin…
