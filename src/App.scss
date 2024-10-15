@@ -99,12 +99,10 @@ a {
 			gap: spc(m);
 
 			.product-availability-months {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
+				display: grid;
+				grid-template-columns: auto auto auto auto auto auto;
+				justify-items: center;
 				gap: spc(xs);
-				width: 230px;
-				margin: 0 auto;
 			}
 
 			.product-some-numbers {
