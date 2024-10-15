@@ -41,7 +41,7 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step-0` :
 >
 > ```terminal
-> git checkout -b step-0 origin/step-0
+> git checkout step-0
 > ```
 
 - [ ] Supprimez le code initié par ViteJS.
