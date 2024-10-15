@@ -37,7 +37,7 @@ const ProductCards = ({className, products}) => {
                 id={`product-${i}-availability-months-${j}`}
                 label={month}
                 tooltipContent={longMonthStrings[j]}
-                status={product.months.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}/>)}
+                status={product?.months?.includes(j) ? BadgeStatus.success : BadgeStatus.inactive}/>)}
             </div>
             <div className="product-some-numbers">
                 <div className="product-some-numbers--local">
