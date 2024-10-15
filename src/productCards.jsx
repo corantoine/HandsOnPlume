@@ -42,12 +42,12 @@ const ProductCards = ({className, products}) => {
             <div className="product-some-numbers">
                 <div className="product-some-numbers--local">
                     {product.local ? '🇫🇷 Local' : '✈️ Non local'}
-                    <Button className="local-interrogation-handler"
+                    <Button className="local-interrogation-handler" small
                             onClick={() => setLocalInterrogation(true)}>?</Button>
                 </div>
                 <div className="product-some-numbers--co2">
                     <span className="product-some-numbers--highlighting">{product.CO2 ?? "?"}</span> kgCO2e/kg
-                    <Button className="co2-interrogation-handler"
+                    <Button className="co2-interrogation-handler" small
                             onClick={() => setCO2Interrogation(true)}>?</Button>
                 </div>
             </div>
