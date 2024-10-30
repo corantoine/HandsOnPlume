@@ -21,7 +21,7 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
   - https://vitejs.dev/guide/#scaffolding-your-first-vite-project
 - [ ] Initialisez le système de versioning Git pour pouvoir travailler sur plusieurs branches.
   - `git init`
-  - `Git checkout -b step-0`
+  - `Git checkout -b mon-tp`
 - [ ] Lancez l’application par défaut
   - `npm install`
   - `npm run dev`
