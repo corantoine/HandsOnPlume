@@ -29,45 +29,15 @@ L’objectif de l'étape 0 est d’initialiser un projet React et la boîte à o
 
 > ℹ️ le port peut varier dans certains cas 😉.
 
-> ℹ️ L'import du package `plume-react` dans le package.json est à réaliser dans l'étape 1, ici, il faut juste se concentrer sur l'initialisation d'un projet ViteJs React par défaut.
-
-## Étape 1, <small>⏱️ _~35/40 min_</small>
-
-L’objectif du Step 1 est d’initier une page d’accueil simple. Les composants Plume `Mediacard` et le _display_ `flex` seront de la partie.
-
-![Capture d'écran de l'état final de l'étape 1](README.assets/step1-final-result.png)
-￼
-
-> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step-0` :
->
-> ```terminal
-> git checkout step-0
-> ```
-
 - [ ] Supprimez le code initié par ViteJS.
-
 - [ ] Ajoutez les dépendances `plume-react` et `sass`.
   - Pensez à renommer le fichier `App.css` en `App.scss`.
 
 > ℹ️ `npm install plume-react; npm install sass --save-dev;`
-
 > en cas de soucis de configuration : `npm config set registry http://nexus-fabfonc.maif.local/repository/npm-public/``
 
-- [ ] Initiez un layout de base avec une balise `header`, `main` et `footer`.
-  - Ajoutez un titre principal « Est-ce bien la saison ? »
-  - Pour le footer, ajoutez un message plein d’Amour
-
-> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’utiliser les balises HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
-
-- [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
-
-  - Téléchargez et ajoutez dans votre projet le fichier products.json https://github.maif.io/commons/plume-react-vegetables-seasons/raw/step-1/src/assets/products.json
-  - Importez le fichier dans votre App.jsx et affectez ces produits à une constante
-  - Affichez le nom et l’emoji des produits en utilisant le composant MediaCard https://pages.github.maif.io/commons/plume-react/#/Layout/MediaCard
-
-- [ ] Mettons un peu de peinture là-dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-- [ ] Importez le thème `@import "~plume-react/dist/style/theme-maif-dsi"`;
+- [ ] Téléchargez et ajoutez dans votre projet le fichier products.json https://github.maif.io/commons/plume-react-vegetables-seasons/raw/step-1/src/assets/products.json
+- [ ] Importez le fichier dans votre App.jsx et affectez ces produits à une constante pour la suite du tp.
 
 > 🚨 Attention
 >
@@ -95,6 +65,33 @@ L’objectif du Step 1 est d’initier une page d’accueil simple. Les composan
 > 	},
 > })
 > ```
+
+## Étape 1, <small>⏱️ _~35/40 min_</small>
+
+L’objectif du Step 1 est d’initier une page d’accueil simple. Les composants Plume `Mediacard` et le _display_ `flex` seront de la partie.
+
+![Capture d'écran de l'état final de l'étape 1](README.assets/step1-final-result.png)
+￼
+
+> ℹ️ Si vous avez sauté l'étape 0 ou si vous voulez partir sur une base saine, tirez la branche `step-0` :
+>
+> ```terminal
+> git checkout step-0
+> ```
+
+- [ ] Initiez un squelette de page de base avec une balise `header`, `main` et `footer`.
+  - Ajoutez un titre principal « Est-ce bien la saison ? »
+  - Pour le footer, ajoutez un message plein d’Amour
+
+> ℹ️ Pour rappel la meilleure des sémantiques pour l’accessibilité est d’utiliser les balises HTML de base. Les attributs wai-aria sont à utiliser que lorsque nous sommes limités avec les balises HTML.
+
+- [ ] Maintenant, passons aux choses sérieuses avec le conteneur principal `main`
+  - Il est temp de vous plonger dans la documentation de **plume-react** et d'afficher le nom et l’emoji des produits en utilisant le composant MediaCard https://pages.github.maif.io/commons/plume-react/#/Layout/MediaCard
+
+- [ ] Mettons un peu de peinture là-dedans en utilisant le type d’affichage Flexbox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+- [ ] Importez le thème `@import "~plume-react/dist/style/theme-maif-dsi"`;
+
 
 ### Pour aller plus loin…
 
