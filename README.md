@@ -1,5 +1,12 @@
 # Travaux pratiques `Plume React`
 
+> 🚨 Prérequis : 
+> - Avoir une connaissance de base de React.
+> - Avoir une version de **NodeJS 16** ou supérieure.
+> - Avoir une version de **npm 7** ou supérieure.
+> - Avoir une version de **git 2.33** ou supérieure.
+> - Avoir un ide de développement (VSCode, IntelliJ, …)
+
 Pour démarrer les travaux pratiques, clonez le projet `plume-react-vegetables-seasons` :
 
 ```terminal
