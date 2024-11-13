@@ -93,6 +93,29 @@ a {
       padding: spc(m);
       font-size: x-large;
     }
-  }
 
+
+  }
+    // .badge{
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     max-width: 200px;
+    //     height: auto;
+    //     gap: spc(m);
+    //     justify-content: center;
+    //     margin: spc(m);
+    // }
+    .badge{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: spc(m);
+    }
+
+    .info-product{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: spc(m)
+    }
 }
