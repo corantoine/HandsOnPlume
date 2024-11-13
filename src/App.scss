@@ -109,13 +109,15 @@ a {
     .badge{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: spc(m);
+        justify-items: center;
+        gap: spc(xs);
     }
 
     .info-product{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         gap: spc(m)
     }
 }
