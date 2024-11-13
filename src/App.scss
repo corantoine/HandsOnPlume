@@ -1,2 +1,19 @@
 @import "~plume-react/dist/style/theme-utilities";
 @import "~plume-react/dist/style/theme-maif-dsi";
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    //espacement entre toutes les boites
+    gap: 0.5rem;
+    justify-content: flex-start;
+
+    .mediacard {
+        flex-direction: row-reverse;
+        justify-content:center;
+        align-items: center;
+        margin: spc(xxs);
+        padding: spc(xs);
+        // background-color: clr(grey);
+    }
+}
