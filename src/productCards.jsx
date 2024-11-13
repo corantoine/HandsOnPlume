@@ -5,6 +5,7 @@ import "./App.scss"
 import {AnchorDialog, Badge, BadgeStatus, Button, MediaCard, Tooltip, TooltipVariant,} from "plume-react"
 import useMonthStrings from "./useMonthStrings.js";
 
+//A chaque fois qu'on va créer un badge, il va créer la ref dont il a besoin
 const TooltifiedBadge = ({id, label, status, tooltipContent}) => {
     const badgeRef = useRef(undefined)
     return (<>
