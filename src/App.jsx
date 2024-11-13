@@ -4,6 +4,7 @@ import initialProducts from './assets/products.json'
 
 import { useState } from 'react'
 import { Button } from 'plume-react'
+import AddProductForm from './AddProductForm.jsx'
 
 function App() {
 	const products = initialProducts
@@ -18,7 +19,7 @@ function App() {
 				{addMode ? (
 					<section>
 						<h2>Ajouter un Produit</h2>
-						<span>Intégrer ici un formulaire</span>
+						<span><AddProductForm/></span>
 					</section>
 				) : (
 					<section>
