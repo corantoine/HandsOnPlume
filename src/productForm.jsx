@@ -1,8 +1,7 @@
-import {useState} from "react";
 import PropTypes from "prop-types";
 
 import useMonthStrings from "./useMonthStrings";
-import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment} from "plume-react";
+import {ComboBoxFormFragment, Form, NumberFormFragment, RadioGroupFormFragment, StringFormFragment, useValidatedState} from "plume-react";
 
 
 const emptyProduct = {
@@ -17,7 +16,7 @@ const emptyProduct = {
 };
 const ProductForm = ({id, className, onSubmit, onCancel}) => {
     const {longMonthStrings} = useMonthStrings()
-    const [product, setProduct] = useState(emptyProduct)
+    const {state: product, setState: setProduct, errors, validate} = useValidatedState(emptyProduct)
 
     return <Form id={id}
                  className={["product-form", className].filter(Boolean).join(' ')}
@@ -26,12 +25,23 @@ const ProductForm = ({id, className, onSubmit, onCancel}) => {
                      onCancel();
                  }}
                  onSubmit={() => {
+                     const validationRules = validate({
+                        label: { 
+                            fr:(it) =>{
+                                if([undefined, null].includes(it.fr))
+                                    return "Le nom du produit est obligatoire"
+                            }
+                        }
+                     })
+                     validationRules.throwErrorIfFail();
                      onSubmit(product)
                  }}>
         <StringFormFragment
             id="label"
             label="Nom du produit"
+            mandatory
             value={product?.label?.fr}
+            error={errors?.label?.fr}
             onValueChange={label => setProduct({...product, label: {fr: label}})}
         />
         <StringFormFragment
@@ -67,6 +77,7 @@ const ProductForm = ({id, className, onSubmit, onCancel}) => {
                 })(i)
             }))}
             value={product?.months}
+            mandatory
             onValueChange={months => setProduct({...product, months})}
             renderOption={({label, icon}) => `${icon} ${label}`}
             multiple
@@ -86,12 +97,14 @@ const ProductForm = ({id, className, onSubmit, onCancel}) => {
             <NumberFormFragment
                 id="pef"
                 label="PEF"
+                mandatory
                 formatDescription="0,11"
                 value={product?.pef}
                 onValueChange={pef => setProduct({...product, pef})}/>
             <NumberFormFragment
                 id="CO2"
                 label="CO2"
+                mandatory
                 formatDescription="1,76 kgCO2e/kg"
                 unit="kgCO2e/kg"
                 value={product?.CO2}
